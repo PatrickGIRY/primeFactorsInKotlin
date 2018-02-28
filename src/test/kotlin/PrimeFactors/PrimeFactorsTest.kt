@@ -18,10 +18,16 @@ class PrimeFactorsTest {
         assertThat(factorOf(2)).containsExactly(2)
     }
 
+    @Test
+    @DisplayName("3 has 3 as factor")
+    fun factors_of_3() {
+        assertThat(factorOf(3)).containsExactly(3)
+    }
+
     private fun factorOf(n: Int): List<Int> {
         val factors = mutableListOf<Int>()
         if (n > 1) {
-            factors.add(2)
+            factors.add(n)
         }
         return factors
     }
