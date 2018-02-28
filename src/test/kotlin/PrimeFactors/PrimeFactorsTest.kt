@@ -63,15 +63,13 @@ class PrimeFactorsTest {
     private fun factorOf(n: Int): List<Int> {
         val factors = mutableListOf<Int>()
         var remainder = n
-        if (remainder > 1) {
-            while (remainder%2 == 0) {
-                factors.add(2)
-                remainder /= 2
+        var divisor = 2
+        while (remainder > 1) {
+            while (remainder% divisor == 0) {
+                factors.add(divisor)
+                remainder /= divisor
             }
-            while (remainder%3 == 0) {
-                factors.add(3)
-                remainder /= 3
-            }
+            divisor++
         }
         if (remainder > 1) {
             factors.add(remainder)
