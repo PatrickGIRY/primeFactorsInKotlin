@@ -60,6 +60,12 @@ class PrimeFactorsTest {
         assertThat(factorOf(9)).containsExactly(3, 3)
     }
 
+    @Test
+    @DisplayName("2 * 2 * 3 * 5 * 7 * 11 * 13 has 2, 2, 3, 5, 7, 11 and 13 as factors")
+    fun factors_of_2_time_2_time_3_time_5_time_7_time_11_time_13() {
+        assertThat(factorOf(2 * 2 * 3 * 5 * 7 * 11 * 13)).containsExactly(2, 2, 3, 5, 7, 11, 13)
+    }
+
     private fun factorOf(n: Int): List<Int> {
         val factors = mutableListOf<Int>()
         var remainder = n
