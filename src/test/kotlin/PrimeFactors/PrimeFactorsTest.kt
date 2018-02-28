@@ -71,9 +71,6 @@ class PrimeFactorsTest {
             }
             divisor++
         }
-        if (remainder > 1) {
-            factors.add(remainder)
-        }
         return factors
     }
 
