@@ -48,11 +48,17 @@ class PrimeFactorsTest {
         assertThat(factorOf(7)).containsExactly(7)
     }
 
+    @Test
+    @DisplayName("8 has 2, 2 and 2 as factors")
+    fun factors_of_8() {
+        assertThat(factorOf(8)).containsExactly(2, 2, 2)
+    }
+
     private fun factorOf(n: Int): List<Int> {
         val factors = mutableListOf<Int>()
         var remainder = n
         if (remainder > 1) {
-            if (remainder%2 == 0) {
+            while (remainder%2 == 0) {
                 factors.add(2)
                 remainder /= 2
             }
