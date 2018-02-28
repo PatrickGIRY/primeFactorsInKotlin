@@ -38,9 +38,9 @@ class PrimeFactorsTest {
                 factors.add(2)
                 remainder /= 2
             }
-            if (remainder>1) {
-                factors.add(remainder)
-            }
+        }
+        if (remainder > 1) {
+            factors.add(remainder)
         }
         return factors
     }
