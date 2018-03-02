@@ -71,7 +71,7 @@ class PrimeFactorsTest {
         var remainder = n
         var divisor = 2
         while (remainder > 1) {
-            while (remainder% divisor == 0) {
+            while (remainder % divisor == 0) {
                 factors.add(divisor)
                 remainder /= divisor
             }
